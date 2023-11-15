@@ -1,0 +1,102 @@
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main{
+    position: absolute;
+    margin: 3% 34%;
+    background-color: white;
+    height: 45vw;
+    width: 30vw;
+    border-radius: 30px ;
+    border: 2px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 6px 5px 18px 2px black;
+   
+}
+.img1{
+    margin: 20px auto;
+    height: 20vh;
+    width: 15vw;
+    border-radius: 30px;
+}
+.one{
+    padding: 20px;
+}
+.one input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+a:link{
+    color: rgb(70, 68, 68);
+    text-decoration: none;
+ }
+button{
+    width: 20vw;
+    height: 30vh;
+    border-radius: 30px;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: medium;
+}
+.login{
+    background-color: rgba(255, 0, 0, 0.883);
+    font-family: 'Poppins', sans-serif;
+}
+.login:hover{
+    background-color: rgb(224, 10, 10);
+}
+.fb{
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background-color:  #0166e1df;
+}
+.fb:hover{
+    background-color: #17A9FD;
+}
+button img{
+    margin-right: 25px;
+    height: 5vh;
+    width:  3vw;
+}
+p{
+margin-top: 4px;
+margin-bottom: 4px;
+}
+.google{
+   
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+}
+.google:hover{
+    background-color: #ddd;
+}
+article{
+    color:  #8e8e8e;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: small;
+}
+hr{
+    width: 15vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
