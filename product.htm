@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Masterpiece Mart</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="product.css" />
+    
+
+                                           <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+                                            <!-- Poppins font-style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"/>
+                                                  <!-- Playfair font-style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"/>
+                                                    <!-- Serif font-style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <!-- G font for product title-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+                                              <!-- navbar section -->
+
+      <div class="navbar">
+        <div class="nav-logo"><a href="Index.html">MasterPiece Mart</a></div>
+
+        <div class="search">
+          <input class="input-box" placeholder="Search MasterPiece Mart" />
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="shop-art"><a href="#"> Shop Art</a></div>
+
+        <div class="wishlist"><a href="#">Wishlist</a></div>
+
+        <div class="cart">
+          <a href="#"> Cart <i class="fa-solid fa-cart-shopping"></i> </a>
+        </div>
+
+        <div class="login">
+          <a href="loginpage.html">Login</a> <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+            <!-- Front-section -->
+
+            <div class="product-mains">
+              <div class="product-image">
+                <button class="arrow prev-arrow" onclick="changeImage(-1)">&#9665;</button>
+                <div class="main-image"><img src="prodimg2.jpg" alt="product image" class="prod_main_img" style="border: 5px solid black;" onclick="enlargeImage(this)"></div>
+                <div class="subimages">
+                    <img src="prod3.jpg" alt="fa" class="subimgs" onclick="enlargeImage(this)">
+                    <img src="prod4.jpg" alt="hh" class="subimgs" onclick="enlargeImage(this)">
+                </div>
+                <button class="arrow next-arrow" onclick="changeImage(1)">&#9655;</button>
+                </div>
+              <script>
+                function changeImage(offset) {
+                    const subimages = document.querySelector('.subimages');
+                    subimages.scrollLeft += offset * 809.6; // Scroll to the next/previous image
+                }
+        
+                function changeMainImage(clickedImage) {
+                    const mainImage = document.querySelector('.prod_main_img');
+                    mainImage.src = clickedImage.src;
+                }
+              </script>
+              <div class="product-text">
+                <div class="product-title">
+                  <h2>Starry Night Over The Rhone</h2>                                  
+                  
+                </div>
+                <div class="by"><h2>By</h2></div>
+                <div class="artist-name"> Vincent Van Gogh</div>
+                <div class="product-info">
+                  <div class="info-box-column">
+                    <div class="infobox"> Acrylic painting on streched canvas</div>
+                  
+                    <div class="item-edge">
+                      Wrapped around edges
+                    </div>
+                  
+                  <div class="item-varnished">Varnished and Ready to Hang</div>
+                  </div>
+                </div>
+                  <div class="infobox-column">
+                     <div class="item-signature">signed on front and back</div>
+                     <div class="one-of-a-kind">One-Of-A-Kind!</div>
+                     <div class="item-year">2023</div>
+                  </div>
+                  <div class="product-size">20"h X 20"w</div>
+                  <div class="product-price">$299</div>
+                  <div class="product-shipment">No Shipping Charges</div>
+                  <div class="buyandcart">
+                    <div class="buyNow"><button class="buy">Buy Now</button></div>
+                    <div class="addtocart"><button class="addcart" onclick="addToCart()">Add To Cart</button></div>
+                  </div>
+                  <script>
+                    function addToCart() {
+                        const cartButton = document.querySelector('.addcart');
+                        cartButton.innerHTML = 'In Your Cart';
+                        cartButton.classList.add('in-cart');
+                    }
+                </script>
+                <div class="wishlist" onclick="addToWishlist(this)">
+                  <div class="heart-icon"></div>
+                  <p class="wishlist-text">Add to wishlist</p>
+              </div>
+          
+              <script>
+                  function addToWishlist(element) {
+                      if (!element.classList.contains('added')) {
+                          element.classList.add('added');
+                          element.innerHTML = 'Item added to wishlist';
+                      }
+                  }
+              </script>
+                
+
+              </div>
+            
+              
+              </div>
+        
+        <script>
+            function enlargeImage(img) {
+                img.classList.toggle('enlarged');
+        
+                // Close the image on click outside
+                if (img.classList.contains('enlarged')) {
+                    document.addEventListener('click', function closeImage(e) {
+                        if (!img.contains(e.target)) {
+                            img.classList.remove('enlarged');
+                            document.removeEventListener('click', closeImage);
+                        }
+                    });
+                }
+            }
+        </script>
+        <section>
+          <div class="product-description">
+            <div class="desc-title">
+              <h2 class="u-heading u-heading--4">About this artwork</h2>
+            </div>
+            <div class="desc-text">Starry Night Over the Rhône, is one of Vincent van Gogh's paintings of Arles at night.
+               It was painted on the bank of the Rhône that was only a one or two-minute walk from the Yellow House on the Place Lamartine,
+                which van Gogh was renting at the time. The night sky and the effects of light at night provided the subject for some of van Gogh's more famous paintings, 
+                including Café Terrace at Night (painted earlier the same month) and the June, 1889, canvas from Saint-Remy, The Starry Night.
+            </div>
+          </div>
+
+        </section>
+                                            
+
+      <section>
+        <div class="join">
+          <div class="join-us-on">JOIN US ON</div>
+          <div class="social">
+            <div class="youtube"> <a href="https://www.youtube.com/@muskanart3102"> <i class="fa-brands fa-youtube"></i> <br> Youtube</a> <br> Muskan Art</div>
+            <div class="insta"> <a href="https://www.instagram.com/muskan_arts_0/?hl=en"><i class="fa-brands fa-instagram"></i> <br> Instagram</a> <br> Muskan Art</div>
+            <div class="telegram"> <a href="#">  <i class="fa-brands fa-telegram"></i> <br> Telegram</a> <br> Muskan Art</div>
+          </div>
+        </div>
+      </section>
+
+                                           <!-- Invitation section -->
+      <section>
+
+        <div class="invitation">
+
+          <div class="invite-main">You're invited </div>
+          <div class="invite-message">"Stay up-to-date with monthly new art releases,<br>
+             insightful artist profiles, and exclusive collections"
+          </div>
+          <div class="provide-mail">
+            <input type="text" placeholder="Enter Your Email" class="mail-input">
+            <button class="submitbtn" type="submit">Submit</button>
+          </div>    
+        </div>
+      
+      </section>
+                                            <!-- 1st footer section -->
+      <hr>
+
+      <footer>
+        <div class="footbar">
+          <div class="description">
+            <div class="foot-logo"><a href="Index.html ">MasterPiece Mart</a></div>
+            <div class="desc">Masterpiece Mart is an online art gallery with a curated selection of original art for sale. Shop thousands of oil paintings, acrylics, watercolor paintings, mixed media art, and more. Contact us for a free art advisor consultation, and we’ll be happy to help you find your ideal artwork.</div>
+          </div>
+
+          <div class="links">
+
+            <a href="#">F&A</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Returns</a>
+            <a href="#">About Us</a>
+            <a href="#">Blog</a>
+            <a href="#">Team Wizard</a>
+
+          </div>
+        </div>
+        <hr>
+                                                   <!-- 2nd footer section -->
+        <div class="end">
+          <div class="end-content"> <br><br>PHONE <br> <br><br> 8825******</div>
+          <div class="end-content">  <br><br>EMAIL <br><br><br> teamwizard@pvt.ltd.in</div>
+          <div class="end-content"> SOCIAL MEDIA <br> <br> <a href="https://www.instagram.com/muskan_arts_0/?hl=en"><i class="fa-brands fa-instagram"></i></a> <br> <br> <a href="#"><i class="fa-brands fa-telegram"></i></a> <br><br> <a href="https://www.youtube.com/@muskanart3102"><i class="fa-brands fa-youtube"></i></a></div>
+          <div class="end-content">    </BR><a href="#">TERMS</a> <BR><BR> </BR> <a href="#">PRIVACY</a></div>
+          <div class="end-content"> <br><br><br> Copyright &#169; 2023</div>
+        </div>
+
+
+      </footer>
+    </main>
+  </body>
+</html>
